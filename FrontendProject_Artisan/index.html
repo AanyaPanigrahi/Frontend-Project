@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>HandiCraft MarketPlace</title>
+  <meta name="title" content="">
+  <meta name="description" content="This is an e commerce site for a handicrafts producing company by Aanya">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+
+
+  <!-- 
+    - custom css link and bootstrap
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+   <!--jquery-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+   <!--angular-->
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg">
+
+</head>
+
+<body id="top" ng-app="">
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preload" data-preaload>
+    <div class="circle"></div>
+    <p class="text">Artisan</p>
+  </div>
+
+
+
+
+
+  <!-- 
+    - #TOP BAR
+  -->
+
+  <div class="topbar">
+    <div class="container">
+
+      <address class="topbar-item">
+        <div class="icon">
+          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span">
+          HeadQuarter Noida, Delhi, India
+        </span>
+      </address>
+
+      <div class="separator"></div>
+
+      <div class="topbar-item item-2">
+        <div class="icon">
+          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span">24 hours store and on site service</span>
+      </div>
+
+      <a href="tel:+11234567890" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span">+91 8877XXXXXX</span>
+      </a>
+
+      <div class="separator"></div>
+
+      <a href="mailto:query@artisan.com" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span">query@artisan.com</span>
+      </a>
+
+    </div>
+  </div>
+
+
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.png" width="90" height="30" alt="loading">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.png" width="160" height="50" alt="loading">
+        </a>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link hover-underline active">
+              <div class="separator"></div>
+
+              <span class="span">Home</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#menu" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">Products</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#about" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">About Us</span>
+            </a>
+          </li>
+
+
+          <li class="navbar-item">
+            <a href="contact.html" target="_blank" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">Contact</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="text-center">
+          <p class="headline-1 navbar-title">Visit Us</p>
+
+          <address class="body-4">
+            HeadQuarter Gandhi Road, Noida,
+            Delhi, India
+          </address>
+
+          <p class="body-4 navbar-text">24 hours service</p>
+
+          <a href="mailto:query@artisan.com" class="body-4 sidebar-link">query@artisan.com</a>
+
+          <div class="separator"></div>
+
+          <p class="contact-label">For more queries contact</p>
+
+          <a href="tel:+88123123456" class="body-1 contact-number hover-underline">
+            +91 8877XXXXXX
+          </a>
+        </div>
+
+      </nav>
+
+      <a href="#" class="btn btn-secondary">
+        <span class="text text-1">Best Sales</span>
+
+        <span class="text text-2" aria-hidden="true">Best Sales</span>
+      </a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero text-center" aria-label="home" id="home">
+
+        <ul class="hero-slider" data-hero-slider>
+
+          <li class="slider-item active" data-hero-slider-item>
+
+            <div class="slider-bg">
+              <img src="./assets/images/hero-slider-1.jpg" width="1880" height="950" alt="" class="img-cover">
+            </div>
+
+            <p class="label-2 section-subtitle slider-reveal">Traditional & Artistic</p>
+
+            <h1 class="display-1 hero-title slider-reveal">
+              Crafting a <br>Sustainable Future
+            </h1>
+
+            <p class="body-2 hero-text slider-reveal">
+              Explore the world of HandiCraft Items
+            </p>
+
+            <a href="#" class="btn slider-reveal">
+              <span class="text text-1">View Our Products</span>
+
+              <span class="text text-2" aria-hidden="true">View Our Products</span>
+            </a>
+
+          </li>
+
+          <li class="slider-item" data-hero-slider-item>
+
+            <div class="slider-bg">
+              <img src="./assets/images/hero-slider-2.jpg" width="1880" height="950" alt="" class="img-cover">
+            </div>
+
+            <p class="label-2 section-subtitle slider-reveal">Traditional and Artistic</p>
+
+            <h3 class="display-1 hero-title slider-reveal">
+              Where Every Purchase <br>Tells a
+              Story
+            </h3>
+
+            <p class="body-2 hero-text slider-reveal">
+              Explore the world of HandiCraft Items
+            </p>
+
+            <a href="#" class="btn btn-primary slider-reveal">
+              <span class="text text-1">View Our Products</span>
+
+              <span class="text text-2" aria-hidden="true">View Our Products</span>
+            </a>
+
+          </li>
+
+          <li class="slider-item" data-hero-slider-item>
+
+            <div class="slider-bg">
+              <img src="./assets/images/hero-slider-3.jpg" width="1880" height="950" alt="" class="img-cover">
+            </div>
+
+            <p class="label-2 section-subtitle slider-reveal">Traditional and Artistic</p>
+
+            <h1 class="display-1 hero-title slider-reveal">
+              A Story of <br>
+              Renewal and Creativity
+            </h1>
+
+            <p class="body-2 hero-text slider-reveal">
+              Explore the world of HandiCraft Items
+            </p>
+
+            <a href="#" class="btn btn-primary slider-reveal">
+              <span class="text text-1">View Our Products</span>
+
+              <span class="text text-2" aria-hidden="true">View Our Products</span>
+            </a>
+
+          </li>
+
+        </ul>
+
+        <button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>
+          <ion-icon name="chevron-back"></ion-icon>
+        </button>
+
+        <button class="slider-btn next" aria-label="slide to next" data-next-btn>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </button>
+
+
+          <span class="label-2 text-center span">Orders</span>
+        </a>
+
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service bg-black-10 text-center" aria-label="service">
+        <div class="container">
+
+          <p class="section-subtitle label-2">Quality Assurance</p>
+
+          <h2 class="headline-1 section-title">We Offer The Best</h2>
+
+          <p class="section-text">
+            From Home Decor to Office setups, toys to ornaments we assure with the best in minimum possible price around. We promote nature through our services.
+          </p>
+ 
+          <ul class="grid-list">              
+
+            <li>
+              <div class="service-card">
+
+                <a href="#" class="has-before hover:shine">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                    <img src="./assets/images/service-1.jpg" width="285" height="336" loading="lazy" alt="Breakfast"
+                      class="img-cover">
+                  </figure>
+                </a>
+
+                <div class="card-content">
+
+                  <h3 class="title-4 card-title">
+                    <a href="#">Clothes and Ornaments</a>
+                  </h3>
+                  <a href="#" class="btn-text hover-underline label-2">View Items</a>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <a href="#" class="has-before hover:shine">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                    <img src="./assets/images/service-2.jpg" width="285" height="336" loading="lazy" alt="Appetizers"
+                      class="img-cover">
+                  </figure>
+                </a>
+
+                <div class="card-content">
+
+                  <h3 class="title-4 card-title">
+                    <a href="#">Decor</a>
+                  </h3>
+
+                  <a href="#" class="btn-text hover-underline label-2">View Items</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <a href="#" class="has-before hover:shine">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                    <img src="./assets/images/service-3.jpg" width="285" height="336" loading="lazy" alt="Drinks"
+                      class="img-cover">
+                  </figure>
+                </a>
+
+                <div class="card-content">
+
+                  <h3 class="title-4 card-title">
+                    <a href="#">Essentials</a>
+                  </h3>
+
+                  <a href="#" class="btn-text hover-underline label-2">View Items</a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <img src="./assets/images/shape-1.png" width="246" height="412" loading="lazy" alt="shape"
+            class="shape shape-1 move-anim">
+          <img src="./assets/images/shape-2.png" width="343" height="345" loading="lazy" alt="shape"
+            class="shape shape-2 move-anim">
+
+        </div>
+      </section>
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about text-center" aria-labelledby="about-label" id="about">
+        <div class="container">
+
+          <div class="about-content">
+
+            <p class="label-2 section-subtitle" id="about-label">Our Story</p>
+
+            <h2 class="headline-1 section-title"></h2>
+
+            <p class="section-text">
+              Our journey into the world of handicraft began with a simple love for nature and admiration towards creating beautiful handmade items. <br>
+              With a purpose to promote Environment protection, Sustainability and Reusability in society, we share our emotions in arts with you.
+            </p>
+
+            <div class="contact-label">Order Online</div>
+
+            <a href="tel:+804001234567" class="body-1 contact-number hover-underline">+91 8877XXXXXX</a>
+
+            <a href="#" class="btn ">
+              <span class="text text-1">Read More</span>
+
+              <span class="text text-2" aria-hidden="true">Read More</span>
+            </a>
+            <button id="mebutton" style="background-color: bisque; margin-left: 120PX; width: 140px; border-radius: 10px; margin-top: 20px;">Zoom In or Out</button>
+
+          </div>
+
+          <figure class="about-banner">
+
+            <img src="./assets/images/about-banner.jpg" width="570" height="570" loading="lazy" alt="about banner"
+              class="w-100" data-parallax-item data-parallax-speed="1">
+
+            <div class="abs-img abs-img-1 has-before" id="meimage1" data-parallax-item data-parallax-speed="1.75">
+              <img src="./assets/images/about-abs-image.jpg" width="285" height="285" loading="lazy" alt=""
+                class="w-100">
+            </div>
+
+            <div class="abs-img abs-img-2 has-before" id="meimage2">
+              <img src="./assets/images/badge-2.png" width="133" height="134" loading="lazy" alt="">
+            </div>
+
+          </figure>        
+      </div>
+      </section>
+    </body>
+    <script> 
+    $(document).ready(function(){
+      var zoomed = false;
+            
+            $("#mebutton").click(function(){
+                if (zoomed) {
+                    $("#meimage1").animate({
+                        right: '250px',
+                        opacity: '1',
+                        height: '285',
+                        width: '285'
+                    });
+                    zoomed = false;
+                } else {
+                    $("#meimage1").animate({
+                        left: '150px',
+                        opacity: '1',
+                        height: '440px',
+                        width: '480px'
+                    });
+                    zoomed = true; 
+                }
+            });
+        });
+    </script> 
+    <body>
+
+      <!-- 
+        - #SPECIAL DISH
+      -->
+
+      <section class="special-dish text-center" aria-labelledby="dish-label">
+
+        <div class="special-dish-banner">
+          <img src="./assets/images/special-banner.jpg" width="940" height="900" loading="lazy" alt="special dish"
+            class="img-cover">
+        </div>
+
+        <div class="special-dish-content bg-black-10">
+          <div class="container">
+
+            <img src="./assets/images/badge-1.png" width="28" height="41" loading="lazy" alt="badge" class="abs-img">
+
+            <p class="section-subtitle label-2">Best Seller</p>
+
+            <h2 class="headline-1 section-title">Embroidered Designer Fabrics</h2>
+
+            <p class="section-text">
+              Always in demand, our embroidered clothing line of Kasmiri shawls and Banarasi Chikankari Kurtas has received a great response from buyers. It's uniqueness and purity never failed to impress any.
+            </p>
+
+            <div class="wrapper">
+              <del class="del body-3">Rs.1399</del>
+
+              <span class="span body-1">Rs.899</span>
+            </div>
+
+            
+            <div class="">
+              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                View More Items
+              </button>
+              <ul class="dropdown-menu " style="font-size: 0.5cm; background-color: navajowhite; font-family: 'Times New Roman', Times, serif;">
+                <li>Ceramic Accessories</li>
+                <li>Kashmiri Woolen Shawl</li>
+                <li>Hand embroidered Kurtis</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+       
+
+      </section>
+
+
+
+
+
+      <!-- 
+        - #MENU
+      -->
+
+      <section class="section menu" aria-label="menu-label" id="menu">
+        <div class="container">
+
+          <p class="section-subtitle text-center label-2">Special Selection</p>
+
+          <h2 class="headline-1 section-title text-center">Top Picks</h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="menu-card hover:card">
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="/assets/images/menu-1.png" alt="" style="width:100px">
+                </figure>
+
+                <div>
+
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="#" class="card-title">Ceramic Jhumkas</a>
+                    </h3>
+                    <span class="badge label-1">Sale</span>
+                    <span class="span title-2">Rs.199 +</span>
+                  </div>
+
+                  <p class="card-text label-1">
+                    Exquisite handcrafted ceramic beaded Jhumkas, blending traditional elegance with contemporary charm
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="menu-card hover:card">
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="/assets/images/menu-3.png" alt="" style="width:100px">
+                </figure>
+
+                <div>
+
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="#" class="card-title">Wall Hangings</a>
+                    </h3>
+
+                    <span class="span title-2">Rs.299 +</span>
+                  </div>
+
+                  <p class="card-text label-1">
+                    merging timeless beauty with modern design, perfect for adding a touch of elegance to any space
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="menu-card hover:card">
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="/assets/images/menu-2.jpg" alt="" style="width:100px">
+                </figure>
+
+                <div>
+
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="#" class="card-title">Paintings</a>
+                    </h3>
+
+                    <span class="span title-2">Rs.699 +</span>
+                  </div>
+
+                  <p class="card-text label-1">
+                    fusing artistic expression with meticulous attention to detail, to adorn your walls with timeless beauty
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="menu-card hover:card">
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="/assets/images/menu-4.png" alt="" style="width:100px">
+                </figure>
+
+                <div>
+
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="#" class="card-title">Wooden Sculptures</a>
+                    </h3>
+
+                    <span class="badge label-1">New</span>
+
+                    <span class="span title-2">Rs.1199 +</span>
+                  </div>
+
+                  <p class="card-text label-1">
+                    Elegantly carved, sculpted from sustainably sourced wood, to add a touch of nature to your living
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="menu-card hover:card">
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="/assets/images/menu-5.jpg" alt="" style="width: 100px;">
+                </figure>
+
+                <div>
+
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="#" class="card-title">Clay Pottery</a>
+                    </h3>
+
+                    <span class="span title-2">Rs.399 +</span>
+                  </div>
+
+                  <p class="card-text label-1">
+                    shaped by skilled hands and fired with passion to bring rustic charm to your home
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="menu-card hover:card">
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="/assets/images/menu-6.jpg" alt="" style="width: 100px;">
+                </figure>
+
+                <div>
+
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="#" class="card-title">Shawls and Kurtis</a>
+                    </h3>
+
+                    <span class="span title-2">Rs.899 +</span>
+                  </div>
+
+                  <p class="card-text label-1">
+                    Embroidered clothing line of Kasmiri shawls and Banarasi Chikankari Kurtas with uniqueness and purity.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <p class="menu-text text-center">
+            <span class="span">Festive Sales this March</span>
+          </p>
+
+          <a href="#" class="btn ">
+            <span class="text text-1">View All Products</span>
+
+            <span class="text text-2" aria-hidden="true">View All Products</span>
+          </a>
+
+          <img src="./assets/images/shape-1.png" width="921" height="1036" loading="lazy" alt="shape"
+            class="shape shape-2 move-anim">
+          <img src="./assets/images/shape-2.png" width="343" height="345" loading="lazy" alt="shape"
+            class="shape shape-3 move-anim">
+
+        </div>
+      </section>
+
+
+     <!-- 
+        - #EVENT
+      -->
+
+      <section class="section event bg-black-10" aria-label="event">
+        <div class="container">
+
+          <p class="section-subtitle label-2 text-center">Offers and Discounts</p>
+
+          <h2 class="section-title headline-1 text-center">Upcoming Sales</h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="event-card has-before hover:shine">
+
+                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                  <img src="./assets/images/event-1.jpg" width="350" height="450" loading="lazy"
+                    alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
+
+                  <time class="publish-date label-2" datetime="2022-09-15">26/04/2024</time>
+                </div>
+
+                <div class="card-content">
+                  <p class="card-subtitle label-2 text-center">20% off on all items</p>
+
+                  <h3 class="card-title title-2 text-center">
+                    Artisan's 2 year anniversary special sale
+                  </h3>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="event-card has-before hover:shine">
+
+                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                  <img src="./assets/images/event-2.jpg" width="350" height="450" loading="lazy"
+                    alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
+
+                  <time class="publish-date label-2" datetime="2022-09-08">08/06/24</time>
+                </div>
+
+                <div class="card-content">
+                  <p class="card-subtitle label-2 text-center">Summer Special Discounts</p>
+
+                  <h3 class="card-title title-2 text-center">
+                    Huge discounts on clothes and ornaments
+                  </h3>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="event-card has-before hover:shine">
+
+                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                  <img src="./assets/images/event-3.jpg" width="350" height="450" loading="lazy"
+                    alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
+
+                  <time class="publish-date label-2" datetime="2022-09-03">03/09/2022</time>
+                </div>
+
+                <div class="card-content">
+                  <p class="card-subtitle label-2 text-center">Buy 1 get 1</p>
+
+                  <h3 class="card-title title-2 text-center">
+                    Extremely exciting sale during festive seasons
+                  </h3>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <a href="#" class="btn ">
+            <span class="text text-1">View Our Blog</span>
+
+            <span class="text text-2" aria-hidden="true">View Our Blog</span>
+          </a>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+      <!-- 
+        - #TESTIMONIALS
+      -->
+
+      <section class="section testi text-center has-bg-image"
+        style="background-image: url('./assets/images/testimonial-bg.jpg')" aria-label="testimonials">
+        <div class="container">
+
+          <div class="quote">“</div>
+
+          <p class="headline-2 testi-text">
+            I absolutely adore the ceramic jhumkas as the colors are so vibrant yet pleasing. They arrived on time and were beautifully packaged.
+            Will definitely be back for more! ”
+          </p>
+
+          <div class="wrapper">
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
+          </div>
+
+          <div class="profile">
+            
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #RESERVATION
+      -->
+
+      <section class="reservation">
+        <div class="container">
+
+          <div class="form reservation-form bg-black-10">
+
+            <form action="" class="form-left">
+
+              <h2 class="headline-1 text-center">Order Online</h2>
+
+              <p class="form-text text-center">
+                For Queries Contact at<a href="tel:+88123123456" class="link">+91 8877XXXXXX</a>
+                or mail at query@artisan.com
+              </p>
+
+              <div class="input-wrapper">
+                <input type="text" name="name" placeholder="Your Name" autocomplete="off" class="input-field">
+
+                <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off" class="input-field">
+              </div>
+
+              <div class="input-wrapper">
+
+                <div class="icon-wrapper">
+                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                  <select name="person" class="input-field">
+                    <option value="1-person">Sum Items 1</option>
+                    <option value="2-person">Sum Items 2</option>
+                    <option value="3-person">Sum Items 3</option>
+                    <option value="4-person">Sum Items 4</option>
+                    <option value="5-person">Sum Items 5</option>
+                    <option value="6-person">Sum Items 6</option>
+                    <option value="7-person">Sum Items 7</option>
+                  </select>
+
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </div>
+
+
+                <div class="icon-wrapper" value="Offer Cards">
+                  <select name="person" class="input-field">
+                    
+                    <option value="Offer Cards">Discount cards</option>
+                    <option value="">Sale Codes</option>
+                  </select>
+
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </div>
+
+              </div>
+
+              <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
+
+              <button type="submit" class="btn btn-secondary">
+                <span class="text text-1">Order Now</span>
+
+                <span class="text text-2" aria-hidden="true">Order Now</span>
+              </button>
+
+            </form>
+
+            <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
+
+              <h2 class="headline-1 text-center">Contact Us</h2>
+
+              <p class="contact-label">Feedbacks</p>
+
+              <a href="tel:+88123123456" class="body-1 contact-number hover-underline">+91 8877XXXXXX</a>
+
+              <div class="separator"></div>
+
+              <p class="contact-label">Location</p>
+
+              <address class="body-4">
+                HeadQuarter Gandhi Road, Noida <br>
+                Delhi, India
+              </address>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+          <img src="./assets/images/shape-7.png" width="208" height="178" loading="lazy" alt="shape"
+            class="shape shape-1">
+
+          <img src="./assets/images/shape-8.png" width="120" height="115" loading="lazy" alt="shape"
+            class="shape shape-2">
+
+        </div>
+      </section>
+
+
+        <p class="copyright" style="margin-left: 40%;">
+          &copy; 2024 Artisan. All Rights Reserved |  <a href="https://github.com/AanyaPanigrahi"
+            target="_blank" class="link">AanyaPanigrahi</a>
+        </p>
+
+
+
+  <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

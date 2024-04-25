@@ -1,0 +1,81 @@
+
+        <!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Form Validation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    </head>
+    <body ng-controller="myController">
+        <div class="container" style="background-image: url('./assets/images/footer-bg.jpg')" class="footer section has-bg-image text-center">
+            <div class="footer-top grid-list">
+                <div class="footer-brand has-before has-after">
+                    <a href="#" class="logo">
+                        <img src="./assets/images/logo.png" width="120" height="40" loading="lazy" alt="">
+                    </a>
+                    <address class="body-4" style="margin: auto auto auto auto;"> Gandhi Road, Noida, Delhi </address>
+                    <a href="mailto:booking@grilli.com" class="body-4 contact-link">query@artisan.com</a>
+                    <a href="tel:+88123123456" class="body-4 contact-link">+91 8877XXXXXX</a>
+                    <div class="wrapper">
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                    </div>
+                    <p class="title-1" style="margin-left: 22%;">Get News & Offers</p>
+                    <p class="label-1" style="margin-top: 29px;"> Follow us on Socials & Get <span class="span">10% Off</span> </p>
+                    <div>
+                        <input type="text" ng-model="email" placeholder="Enter email">
+                        <button type="button" style="color: rgb(4, 0, 0); background-color: bisque; width: 150px; border-radius: 20px; margin-top: 1cm;" ng-click="validateEmail()">Enter Email</button>
+                        <div ng-if="emailChecked">
+                            <p ng-if="isValidEmail">Response sent to Artisan</p>
+                            <p ng-if="!isValidEmail">Invalid email: {{email}}</p>
+                        </div>
+                    </div>
+                    </form>
+                    </div>
+                </body>
+                    <script>
+                        angular.module('myApp', [])
+                            .controller('myController', ['$scope', function($scope) {
+                                $scope.email = '';
+                                $scope.isValidEmail = false;
+                                $scope.emailChecked = false;
+                
+                                $scope.validateEmail = function() {
+                                    // Regular expression for alphanumeric characters, no special characters, and ending with '@gmail.com'
+                                    var emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
+                                    if ($scope.email.trim() === '') {
+                                        $scope.isValidEmail = false;
+                                    } else {
+                                        $scope.isValidEmail = emailRegex.test($scope.email) && $scope.email.endsWith('@gmail.com');
+                                    }
+                                    $scope.emailChecked = true;
+                                };
+                            }]);
+                    </script>
+                <body>
+                <ul class="footer-list">
+                    <li>
+                        <a href="#" class="label-2 footer-link hover-underline" style="margin-top: 100px;">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#" class="label-2 footer-link hover-underline">Youtube</a>
+                    </li>
+                    <li>
+                        <a href="#" class="label-2 footer-link hover-underline">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#" class="label-2 footer-link hover-underline">Twitter</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    
+    </html>
+    
